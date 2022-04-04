@@ -77,12 +77,8 @@ image_open = Image.open("tomato.jpg")#.convert("RGB")
 
 image_open = image_open.resize((200, 223), Image.ANTIALIAS)
 tomato_img = ImageTk.PhotoImage(image_open)
-
 canvas.create_image(0, 0, anchor=NW, image=tomato_img)
 timer_text = canvas.create_text(100,130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
-# canvas.pack()
-# count_down(5 * 60)
-
 canvas.grid(column=1, row=1)
 
 start_button = Button(text="Start", highlightthickness=0, command=start_timer)

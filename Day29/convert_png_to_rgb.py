@@ -11,3 +11,5 @@ def convert(input_file_path, output_file_path, color_code):
     background.paste(png, mask=png.split()[3]) # 3 is the alpha channel
     background.save(output_file_path, IMAGE_EXTENSION, quality=QUALITY)
 
+convert("background.png", "background.jpg", "#ffffff")
+convert("kanye.png", "kanye.jpg", "#ffffff")

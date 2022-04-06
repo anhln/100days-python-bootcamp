@@ -10,6 +10,7 @@ load_dotenv(dotenv_path)
 
 API_KEY = os.environ.get("API_KEY")
 auth_token = os.environ.get("AUTH_TOKEN")
+my_phone = os.environ.get("MOBILE_PHONE")
 account_sid = "AC70cd152a51beea71ea4fe746c60fbbd7"
 
 parameters = {
@@ -37,7 +38,7 @@ if response.status_code == 200:
         message = client.messages.create(
             body='Bring an umbrella',
             from_='+17577988291',
-            to='+84825409387'
+            to= my_phone
         )
 
         print(message.sid)
